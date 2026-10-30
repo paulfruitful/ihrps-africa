@@ -219,12 +219,14 @@
     }
 
     /* ==========================================================================
-       3. HERO SECTION (100VH, SAME SCALED TEXT, FRAMELESS PARTNER LOGOS)
+       3. HERO SECTION (100VH / 100DVH, SAME SCALED TEXT, FRAMELESS PARTNER LOGOS)
        ========================================================================== */
     .hero-viewport {
       position: relative;
       height: 100vh !important;
+      height: 100dvh !important;
       min-height: 100vh !important;
+      min-height: 100dvh !important;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -232,8 +234,14 @@
       text-align: center;
       color: #ffffff;
       overflow: hidden;
-      padding-top: 84px;
-      padding-bottom: 22px;
+      padding-top: 80px;
+      padding-bottom: 42px;
+    }
+    @media (max-width: 768px) {
+      .hero-viewport {
+        padding-top: 68px !important;
+        padding-bottom: 72px !important;
+      }
     }
     .hero-bg-photo {
       position: absolute;
@@ -274,8 +282,15 @@
       z-index: 10;
       max-width: 680px;
       margin: auto;
-      padding: 16px 20px;
+      padding: 12px 20px;
       animation: heroRevealUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+    }
+    @media (max-width: 768px) {
+      .hero-center-box {
+        margin-top: auto;
+        margin-bottom: 16px;
+        padding: 8px 18px;
+      }
     }
     @keyframes heroRevealUp {
       0% { opacity: 0; transform: translateY(20px); }
@@ -287,7 +302,7 @@
       font-weight: 800 !important;
       letter-spacing: -0.02em !important;
       color: #ffffff !important;
-      margin: 0 auto 14px auto !important;
+      margin: 0 auto 12px auto !important;
       max-width: 620px !important;
       text-shadow: 0 4px 16px rgba(0, 0, 0, 0.55) !important;
     }
@@ -296,7 +311,7 @@
       line-height: 1.6 !important;
       color: rgba(241, 245, 249, 0.9) !important;
       max-width: 510px !important;
-      margin: 0 auto 22px auto !important;
+      margin: 0 auto 18px auto !important;
       font-weight: 400 !important;
       text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5) !important;
     }
@@ -357,6 +372,12 @@
       width: 100%;
       position: relative;
       z-index: 20;
+      margin-bottom: 14px;
+    }
+    @media (max-width: 768px) {
+      #trusted-partners-slider-section {
+        margin-bottom: 28px !important;
+      }
     }
     .partners-label-wrap {
       margin-bottom: 10px;
