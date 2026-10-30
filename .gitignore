@@ -1,0 +1,6 @@
+# Local helper scripts & duplicate build folders
+*.py
+site/
+offline/
+__pycache__/
+.DS_Store
